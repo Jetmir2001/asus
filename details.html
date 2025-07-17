@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Details - GameHub</title>
+  <link rel="stylesheet" href="details.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 GameHub</h1>
+    <nav>
+      <a href="game.html">Home</a>
+      <a href="store.html">Store</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="game-info">
+      <img id="gameImage" src="" alt="Game Cover" />
+      <div>
+        <h2 id="gameTitle">Game Title</h2>
+        <p id="gameDescription">Game description will appear here...</p>
+        <p><strong>Price: $<span id="gamePrice">0.00</span></strong></p>
+        <button id="addToCartBtn">Add to Cart</button>
+      </div>
+    </div>
+
+    <section class="game-trailer">
+  <h3>Watch Trailer</h3>
+  <div class="trailer-container">
+    <iframe id="trailer" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+
+    <section class="comments-section">
+      <h3>Leave a Comment</h3>
+      <form id="commentForm">
+          <input type="text" id="commentName" placeholder="Your Name" required />
+
+        <textarea id="commentText" required placeholder="Your thoughts about the game..."></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+      <div id="commentsList"></div>
+    </section>
+  </main>
+
+
+ <div class="ratings">
+    <h3>Rate this game</h3>
+    <form id="ratingForm">
+          <input type="text" id="ratingName" placeholder="Your Name" required />
+
+      <div class="stars">
+        <span data-value="1">&#9734;</span>
+      <span data-value="2">&#9734;</span>
+      <span data-value="3">&#9734;</span>
+      <span data-value="4">&#9734;</span>
+      <span data-value="5">&#9734;</span>
+      </div>
+      <button type="submit">Submit Rating</button>
+    </form>
+
+     <div id="ratingsList"></div>
+  <p id="averageRating">Average Rating: N/A</p>
+</div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GameHub. All rights reserved.</p>
+  </footer>
+
+  <script src="details.js"></script>
+</body>
+</html>

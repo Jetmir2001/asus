@@ -1,0 +1,295 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameHub Store</title>
+  <link rel="stylesheet" href="store.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🎮 GameHub</h1>
+    <nav>
+      <a href="game.html">Home</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+      <div id="menu-toggle" class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+    <span id="userGreeting"></span>
+<button class="btn10"                 onclick="logout()">Logout</button>
+
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Game Store</h2>
+
+      <!-- Search & Filter -->
+      <div class="store-controls">
+        <input type="text"  id="searchInput" placeholder="Search games..."   oninput="filterGames()"/>
+          <select id="categorySelect" onchange="filterGames()">
+
+
+
+
+          <option value="all">All Categories</option>
+      <option value="rpg">RPG</option>
+      <option value="fps">Shooter</option>
+      <option value="strategy">Strategy</option>
+      <option value="fighting">Fighting</option>
+        </select>
+      </div>
+
+      
+
+      <!-- Game Cards -->
+      <div class="game-grid"  data-category="fps">
+        <div class="game-card">
+          <img src="coddd.jpg" alt="Cyber Battle 2077" />
+          <div class="card-content">
+            <h4>Call of Duty</h4>
+            <p>$49.99</p>
+                    <button class="btn-secondary" onclick="addToCart('Call of Duty', 49.99, 'coddd.jpg', 'fps', )">Add to Cart</button>
+
+                    <button class="btn-first" onclick="viewDetails('Call of Duty', 'fps', 'coddd.jpg', 49.99, 'Classic modern warfare shooter.',
+                          'https://www.youtube.com/embed/ztjfwecrY8E?si=VZKtwRrA2VEUsCEb'
+
+                    )">View Details</button>
+
+          </div>
+        </div>
+        <div class="game-card" data-category="rpg">
+          <img src="cs2.jpg" alt="Kingdoms Clash" />
+          <div class="card-content">
+            <h4>Counter Strike</h4>
+            <p>$39.99</p>
+            <button class="btn-secondary" onclick="addToCart('Counter Strike', 39.99, 'cs2.jpg', 'fps', )">Add to Cart</button>
+
+
+
+           <button class="btn-first" onclick="viewDetails(
+           'Counter Strike',
+          'Shooter',
+          'cs2.jpg',
+          39.99,
+          'Classic tactical shooter.',
+        'https://www.youtube.com/embed/c80dVYcL69E'
+        )">
+       View Details
+      </button>
+
+          </div>
+        </div>
+
+
+        <div class="game-card"  data-category="strategy">
+          <img src="mk.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Mortal Kombat</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Mortal Kombat', 34.99, 'mk.jpg', 'Strategy', )">Add to Cart</button>
+           <button class="btn-first" onclick="viewDetails(
+  'Mortal Kombat',
+  'Strategy',
+  'mk.jpg',
+  34.99,
+  'Intense fighting action with classic characters.',
+  'https://www.youtube.com/embed/jSi2LDkyKmI'
+)">View Details</button>
+
+
+          </div>
+        </div>
+        <!-- Add more game cards here -->
+
+        <div class="game-card" data-category="Shooter">
+          <img src="halo.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Halo</h4>
+            <p>$34.99</p>
+            <button class="btn-secondary" onclick="addToCart('Halo', 34.99, 'halo.jpg', 'Shooter',)">Add to Cart</button>
+             <button class="btn-first" onclick="viewDetails(
+      'Halo',
+      'Shooter',
+      'halo.jpg',
+      34.99,
+      'Epic sci-fi FPS adventure.',
+      'https://www.youtube.com/embed/PyMlV5_HRWk'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="RPG">
+          <img src="nfs.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Need for Speed</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Need for Speed', 34.99, 'nfs.jpg', 'RPG', )">Add to Cart</button>
+              <button class="btn-first" onclick="viewDetails(
+      'Need for Speed',
+      'RPG',
+      'nfs.jpg',
+      34.99,
+      'High-speed street racing thrills.',
+      'https://www.youtube.com/embed/K-5EdHZ0hBs'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="Strategy">
+          <img src="pk.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Pokemon</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Pokemon', 34.99, 'pk.jpg', 'Strategy', )">Add to Cart</button>
+               <button class="btn-first" onclick="viewDetails(
+      'Pokemon',
+      'Strategy',
+      'pk.jpg',
+      34.99,
+      'Catch and train creatures to battle.',
+      'https://www.youtube.com/embed/GIp-WjVFkLM'
+    )">View Details</button>
+          </div>
+        </div>
+
+        <div class="game-card" data-category="Shooter">
+          <img src="wot.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>World of Tanks</h4>
+            <p>$34.99</p>
+          <button class="btn-secondary" onclick="addToCart('World of Tanks', 34.99, 'wot.jpg', 'Shooter',)">Add to Cart</button>
+             <button class="btn-first" onclick="viewDetails(
+      'World of Tanks',
+      'Shooter',
+      'wot.jpg',
+      34.99,
+      'Strategic tank warfare online.',
+      'https://www.youtube.com/embed/Vxa5m4nS98A'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="RPG">
+          <img src="gta.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Grand theft Auto</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Grand Theft Auto', 34.99, 'gta.jpg', 'RPG', )">Add to Cart</button>
+               <button class="btn-first" onclick="viewDetails(
+      'Grand Theft Auto',
+      'RPG',
+      'gta.jpg',
+      34.99,
+      'Open-world crime and adventure.',
+      'https://www.youtube.com/embed/QkkoHAzjnUs'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="Strategy">
+          <img src="sim.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Sim City</h4>
+            <p>$34.99</p>
+          <button class="btn-secondary" onclick="addToCart('Sim City', 34.99, 'sim.jpg', 'Strategy', )">Add to Cart</button>
+         <button class="btn-first" onclick="viewDetails(
+      'Sim City',
+      'Strategy',
+      'sim.jpg',
+      34.99,
+      'Build and manage your own city.',
+      'https://www.youtube.com/embed/2830eSBU3uA'
+    )">View Details</button>
+
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="Shooter">
+          <img src="rs.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Resident Evil</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Resident Evil', 34.99, 'rs.jpg', 'Shooter', )">Add to Cart</button>
+         <button class="btn-first" onclick="viewDetails(
+      'Resident Evil',
+      'Shooter',
+      'rs.jpg',
+      34.99,
+      'Survival horror at its best.',
+      'https://www.youtube.com/embed/arEdruKxrQ8'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="RPG">
+          <img src="spider.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Spider Man</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Spider Man', 34.99, 'spider.jpg', 'RPG', )">Add to Cart</button>
+             <button class="btn-first" onclick="viewDetails(
+      'Spider Man',
+      'RPG',
+      'spider.jpg',
+      34.99,
+      'Swing through New York as the web-slinger.',
+      'https://www.youtube.com/embed/q4GdJVvdxss'
+    )">View Details</button>
+
+          </div>
+        </div>
+
+        <div class="game-card" data-category="Shooter">
+          <img src="bat.jpg" alt="Galactic Tactics" />
+          <div class="card-content">
+            <h4>Batman</h4>
+            <p>$34.99</p>
+           <button class="btn-secondary" onclick="addToCart('Batman', 34.99, 'bat.jpg', 'Shooter', )">Add to Cart</button>
+              <button class="btn-first" onclick="viewDetails(
+      'Batman',
+      'Shooter',
+      'bat.jpg',
+      34.99,
+      'Become the Dark Knight in Gotham.',
+      'https://www.youtube.com/embed/wsf78BS9VE0'
+    )">View Details</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Modal -->
+<div id="cartModal" class="modal-overlay">
+  <div class="modal-content">
+    <h3>Item added to cart!</h3>
+    <div class="modal-buttons">
+      <button class="btn-secondary" onclick="viewCart()">View Cart</button>
+      <button class="btn-outline" onclick="closeModal()">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="store.js"></script>
+</body>
+</html>

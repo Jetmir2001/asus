@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart - GameHub</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+ <header>
+    <h1>🎮 GameHub</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Your Cart</h2>
+    <div id="cart-items" class="cart-container"></div>
+    <div id="cart-summary" class="cart-summary"></div>
+    <button class="cr" onclick="clearCart()">Clear Cart</button>
+
+    <button id="continue-shopping" class="btn-continue">Continue Shopping</button>
+
+
+
+   <h3>Checkout</h3>
+<form id="checkoutForm" class="checkout-form">
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+
+  <div class="form-group">
+    <label for="card">Card Number</label>
+    <input type="text" id="card" name="card" maxlength="19" placeholder="1234 5678 9012 3456" required />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="expiry">Expiry Date</label>
+      <input type="text" id="expiry" name="expiry" maxlength="5" placeholder="MM/YY" required />
+    </div>
+
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="123" required />
+    </div>
+  </div>
+
+  <button type="submit" class="btn-secondary">Place Order</button>
+</form>
+
+<div id="successMessage" class="success-message" style="display: none;">
+  <h3>✅ Order Confirmed!</h3>
+  <p>Thank you for shopping with <strong>GameHub</strong>. Your order has been placed successfully.</p>
+  <a href="store.html" class="btn-secondary">Continue Shopping</a>
+</div>
+
+
+
+  <footer>
+    <p>&copy; 2025 GameHub. All rights reserved.</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

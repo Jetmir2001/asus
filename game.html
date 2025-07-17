@@ -1,0 +1,175 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameHub - Buy Your Favorite Games</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 GameHub</h1>
+    <nav>
+      <a href="game.html">Home</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Discover & Buy Top Games</h2>
+      <button class="btn2"  onclick="window.location.href='store.html'" >BROWSE</button>
+      <p>Get the latest titles at unbeatable prices.</p>
+    </section>
+
+    <section class="game-listings">
+      <h3>Featured Games</h3>
+      <div class="games">
+        <!-- Game card example -->
+        <div class="game-card">
+          <img src="coddd.jpg" alt="Game Cover">
+          <h4>Cyber Battle 2077</h4>
+          <p>$49.99</p>
+          <button onclick="addToCart('Cyber Battle 2077')">Buy Now</button>
+        </div>
+
+        <div class="game-card">
+          <img src="cs2.jpg" alt="Game Cover">
+          <h4>Kingdoms Clash</h4>
+          <p>$39.99</p>
+          <button onclick="addToCart('Kingdoms Clash')">Buy Now</button>
+        </div>
+        <!-- Add more game cards -->
+      </div>
+    </section>
+  </main>
+
+  <section class="hero-banner">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>GameHub - Play Without Limits</h1>
+      <p>Discover top titles, new releases, and exclusive offers all in one place.</p>
+
+      <div class="platform-icons">
+        <img src="ps.jpg" alt="PC">
+        <img src="2.jpg" alt="PlayStation">
+        <img src="steamm.jpg" >
+        <img src="twitch.jpg" alt="Switch">
+      </div>
+
+      <div class="hero-buttons">
+        <a href="store.html" class="btn-primary">Browse Store</a>
+        <a href="#latest" class="btn-outline">See What's New</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="latest-releases">
+  <div class="container">
+    <h2>Latest Releases</h2>
+    <div class="release-grid">
+      <div class="release-card">
+        <img src="coddd.jpg" alt="Elden Ring" />
+        <h3>Call of duty</h3>
+        <p>Explore the Lands Between in this action RPG masterpiece.</p>
+      </div>
+      <div class="release-card">
+        <img src="cs2.jpg" alt="Diablo IV" />
+        <h3>Counter Strike</h3>
+        <p>Dark dungeons, intense loot, and powerful bosses await.</p>
+      </div>
+      <div class="release-card">
+        <img src="bat.jpg" alt="Starfield" />
+        <h3>Batman</h3>
+        <p>Venture into space in Bethesda’s new sci-fi RPG epic.</p>
+      </div>
+
+        <div class="release-card">
+        <img src="nfs.jpg" alt="Starfield" />
+        <h3>Need for Speed</h3>
+        <p>Venture into space in Bethesda’s new sci-fi RPG epic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="about">
+      <h3>About GameHub</h3>
+      <p>
+        GameHub is your trusted platform to find and buy top-rated PC and console games.
+        Whether you're into RPGs, shooters, or indie gems, we've got you covered.
+      </p>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <p>Get the latest game deals and news delivered straight to your inbox!</p>
+      <form id="newsletter-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+    <!-- Newsletter Signup -->
+   
+
+     <section class="testimonials">
+      <h3>What Our Users Say</h3>
+      <div class="testimonial-list">
+        <blockquote>
+          “GameHub always has the best prices! My go-to for new releases.”
+          <cite>– Alex M.</cite>
+        </blockquote>
+        <blockquote>
+          “Fast delivery and great customer service. Highly recommend.”
+          <cite>– Jamie R.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>🎮 GameHub</h2>
+      <p>Your ultimate destination for epic gaming adventures.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="icons/youtube.svg" alt="YouTube"></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 GameHub. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

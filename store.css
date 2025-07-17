@@ -1,0 +1,264 @@
+   body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+ 
+ 
+ 
+ 
+ header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+ 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1e1e2f;
+    flex-direction: column;
+    width: 200px;
+    padding: 1em;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+ 
+ 
+ 
+ 
+ 
+ .store-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2em 0;
+  gap: 1em;
+}
+
+.store-controls input[type="text"],
+.store-controls select {
+  padding: 0.7em;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+  max-width: 100%;
+}
+
+.game-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+}
+
+.game-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  flex-direction: column;
+    transition: transform 0.2s ease;
+    display: flex;
+
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.card-content {
+  padding: 1em;
+  text-align: center;
+}
+
+.card-content h4 {
+  margin-bottom: 0.3em;
+}
+
+.btn-secondary {
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+
+.btn-first{
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: none;
+  background: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-first:hover{
+  background: red;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .card-content h4 {
+    font-size: 1rem;
+  }
+  .card-content p {
+    font-size: 0.9rem;
+  }
+  .card-content button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .game-grid {
+    padding: 10px;
+    gap: 15px;
+  }
+  .card-content h4 {
+    font-size: 0.95rem;
+  }
+  .card-content p {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+    animation: fadeIn 0.3s ease;
+
+}
+
+.modal-content {
+  background: rgb(255, 157, 0);
+  padding: 2em;
+  
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInScale 0.3s ease;
+
+}
+
+.modal-buttons {
+  margin-top: 1.5em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #1e1e2f;
+  color: #1e1e2f;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #1e1e2f;
+  color: white;
+}
+
+
+
+
+
+
+.btn10{
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+.btn10:hover{
+  background: red;
+  transition: 0.3s;
+}
